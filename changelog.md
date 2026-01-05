@@ -1,3 +1,60 @@
+# 7.8.10
+
+- Thank you https://github.com/evenmartinsen for the PR to fix the AV
+
+# 7.8.9
+
+- Thanks to (Edward Miller)[https://github.com/edwardmiller-mesirow] for improving `ConvertTo-ExcelXlsx`and making it more robust
+
+# 7.8.8
+
+- Fix the release
+
+# 7.8.7
+
+- Thanks to [Phil Bossman](https://github.com/pbossman) for the PR and fixing this.
+    
+    Now, back again, you can type `Import-Excel .\yearlySales.xlsx`, press <ctrl+space> and get a list of the worksheets in the Excel file
+
+    ![alt text](images/AutoCompleteSheetNames.png)    
+
+# Infrastructure change
+
+- Thank you to [RipFence](https://github.com/RipFence) who asked how to place a chart on a different sheet from the data and then did a PR adding the example.
+- added `ignore` so files checked into examples do not trigger a CI run
+
+# 7.8.6
+
+- Thank you [John Boyne](https://github.com/kyllath)
+    - Add missing parameter aliases to align with caller/callee
+
+# 7.8.5
+
+- Added `Get-ExcelFileSchema` to get the schema of an Excel file.
+- This was added to support interacting with `ChatGPT`. Passing the schema to the `ChatGPT` via `PowerShellAI` let's you ask questions about the data including generating code based on the schema.
+
+```powershell
+Get-ExcelFileSchema .\salesData.xlsx
+```
+
+```json
+{
+  "ExcelFile": "salesData.xlsx",
+  "WorksheetName": "Sheet1",
+  "Visible": true,
+  "Rows": 10,
+  "Columns": 4,
+  "Address": "A1:D10",
+  "Path": ".",
+  "PropertyNames": [
+    "Region",
+    "State",
+    "Units",
+    "Price"
+  ]
+}
+```
+
 # 7.8.x
 
 Thanks to [Thomas Hofkens](https://github.com/thkn-hofa)

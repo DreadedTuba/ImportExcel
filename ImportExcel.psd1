@@ -6,7 +6,7 @@
     RootModule         = 'ImportExcel.psm1'
 
     # Version number of this module.
-    ModuleVersion      = '7.8.4'
+    ModuleVersion      = '7.8.10'
 
     # ID used to uniquely identify this module
     GUID               = '60dd4136-feff-401a-ba27-a84458c57ede'
@@ -54,6 +54,7 @@ Check out the How To Videos https://www.youtube.com/watch?v=U3Ne_yX4tYo&list=PL5
         'Export-Excel',
         'Export-ExcelSheet',        
         'Get-ExcelColumnName',
+        'Get-ExcelFileSchema',
         'Get-ExcelFileSummary', 
         'Get-ExcelSheetDimensionAddress',       
         'Get-ExcelSheetInfo',
@@ -149,7 +150,7 @@ Check out the How To Videos https://www.youtube.com/watch?v=U3Ne_yX4tYo&list=PL5
             Tags         = @("Excel", "EPPlus", "Export", "Import")
 
             # The web address of an icon which can be used in galleries to represent this module
-            #IconUri = "http://pesterbdd.com/images/Pester.png"
+            #IconUri = 
 
             # The web address of this module's project or support homepage.
             ProjectUri   = "https://github.com/dfinke/ImportExcel"
